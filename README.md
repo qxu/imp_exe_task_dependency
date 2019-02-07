@@ -44,5 +44,5 @@ optional arguments:
  - Not fully robust, reading and writing worker files assumes that the worker files aren't corrupted. So it doesn't handle a half written line for example.
  - Bad pid checking only happens when checking for dependencies
  - Uses pids
- - Uses flock
+ - Uses exclusive locks for everything
 
