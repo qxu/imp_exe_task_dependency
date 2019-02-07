@@ -25,6 +25,7 @@ optional arguments:
 --slow-finish: will sleep before writing the finished status
 
 ## task_config.json format
+```
 [
     {
         "id": task id,
@@ -32,15 +33,15 @@ optional arguments:
         "dependencies": list of dependency task ids
     }
 ]
+```
 
 ## Worker log format
-STARTED {worker_id} {process_pid}
-FINISHED {worker_id}
-BAD {worker_id}
+ - STARTED {worker_id} {process_pid}
+ - FINISHED {worker_id}
+ - BAD {worker_id}
 
 ## Notes
-Some simplifications
  - Not fully robust, reading and writing worker files assumes that the worker files aren't corrupted. So it doesn't handle a half written line for example.
  - Bad pid checking only happens when checking for dependencies
- - Pids 
+ - Uses pids
 
