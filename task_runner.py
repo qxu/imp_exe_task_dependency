@@ -1,7 +1,6 @@
 import argparse
 import os
 import json
-import pathlib
 import fcntl
 import errno
 import subprocess
@@ -59,7 +58,7 @@ def pid_exists(pid):
     except OSError as e:
         if e.errno == errno.ESRCH:
             return False
-        if err.errno == errno.EPERM:
+        if e.errno == errno.EPERM:
             # There's a process (probably), but access was denied
             return True
         raise
