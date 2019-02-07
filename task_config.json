@@ -15,9 +15,5 @@
         "id": "read_all_files",
         "command": "python3 read_file.py 1 && python3 read_file.py 2 && python3 read_file.py 3",
         "dependencies": ["create_file1", "create_file2", "create_file3"]
-    }, {
-        "id": "delete_all_files",
-        "command": "python3 delete_file.py 1 && python3 delete_file.py 2 && python3 delete_file.py 3",
-        "dependencies": ["read_all_files"]
     }
 ]
